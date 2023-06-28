@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+}
+
+.big-link-wrapper {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+
+.heading {
+  margin: 5em;
+  text-align: center;
+  color: green;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.small-h1 {
+  font-size: 2rem;
+}
+
+a {
+  text-wrap: nowrap;
+    width: 17rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: green;
+    font-size: 1.2rem;
+}
+
+.box {}
+
+svg {
+  stroke: green;
+  fill: transparent;
+  background-color: rgb(228, 255, 228);
+}
+
+.svgControls {
+  position: fixed;
+  bottom: 0;
+  margin: 1rem;
+}
