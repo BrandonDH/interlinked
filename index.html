@@ -7,13 +7,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div class="heading">
-    <!-- <div id="heading-svg"></div> -->
-    <h1><em>I have collected many technology related links.</em> 
-      <div class="small-h1">I've visualized each URL here using an algorithm to process the URL as a string, and generate an SVG artifact.</div></h1>
+  <div class="interlinked-grid">
+    <div>
+      <h1 class="interlinked-mark"><mark>"Interlinked"</mark></h1>
+    </div>
+
+    <h2><em>This is a collection of Design and Engineering related links.</em> </h2>
+
+    <div>
+      <p>I've visualized each URL here using an algorithm to process the URL as a string, and generate an SVG artifact.</p>
+    </div>
+
   </div>
-  <div class="big-link-wrapper" id="collected-links"></div>
+
+  <div class="interlinked-grid">
+    <div><em><strong>As I go about building things</strong></em> throughout my day, I often come across useful resource on the internet. I don't want to lose these links. The habit of bookmarking has never been easy to develop for me.</div>
+    <div><em><strong>Right now the idea of visualizing my collection with svg seems fitting.</strong></em> I did end up using chatgpt for some parts of the algorithm, simply because I was more interested in the outcome than the code; like parcing the url string. But now that I have the foundation, I think I'll go back into the JavaScript and fine tune things.</div>
+  </div>
+  <hr>
+  <div class="interlinked-grid" id="collected-links"></div>
   <div class="svgControls">
+    <h4><em>Coming Soon!</em></h4>
     <button id="pauseButton">Pause</button>
     <button id="resumeButton">Play</button>
   </div>

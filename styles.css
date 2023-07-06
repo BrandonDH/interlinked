@@ -2,43 +2,45 @@ body {
   width: 100%;
 }
 
-.big-link-wrapper {
+.interlinked-grid {
     margin: 1em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
 }
 
-.heading {
-  margin: 5em;
-  text-align: center;
-  color: green;
+.interlinked-mark {
+  position: fixed;
 }
 
-h1 {
-  font-size: 3rem;
+.interlinked-child-grid {
+  display: grid;
 }
 
-.small-h1 {
-  font-size: 2rem;
+
+.url-target {
+  display:none;
+  position:relative;
+  bottom: 2rem;
 }
 
-a {
-  text-wrap: nowrap;
-    width: 17rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    color: green;
-    font-size: 1.2rem;
+
+
+.link:hover {
+  border: 1px solid black;
+  border-radius: 2rem;
 }
 
-.box {}
+.link:hover > div.url-target {
+  display: block;
+}
 
 svg {
-  stroke: green;
+  stroke: black;
   fill: transparent;
-  background-color: rgb(228, 255, 228);
+  background-color: rgb(244, 244, 244);
+  border-radius: 2rem;
+
 }
 
 .svgControls {

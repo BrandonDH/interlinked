@@ -63,14 +63,17 @@ function removeProtocol(url) {
 }
 
 function lazyLoadListItemRaw(item, ul) {
-  let newShape = generateShapeSVG(item);
+  // SVG
+  let interlinkedSVG = generateShapeSVG(item);
 
   var columns = item.split(',');
   var url = removeProtocol(columns[0]);
   var info = columns[1];
+
   var li = document.createElement('div');
   li.className = 'box';
   var a = document.createElement('a');
+  
   a.href = columns[0];
   a.textContent = url;
   li.appendChild(a);
@@ -81,13 +84,25 @@ function lazyLoadListItemRaw(item, ul) {
     li.appendChild(span);
   }
 
-  const listItemRaw = document.createElement("div");
+  // link
+  const interlinkedAnchor = document.createElement("a");
+  interlinkedAnchor.className = 'box link';
+  interlinkedAnchor.setAttribute('href', a);
+  interlinkedAnchor.setAttribute('title', `Go to the website ${a}`);
 
-  listItemRaw.className = 'box';
-  listItemRaw.innerHTML = `<a class="link" title="Go to the website ${a}" href="${a}">${a}</a>`;
-  listItemRaw.appendChild(newShape);
+  // label
+  const interlinkedLabel = document.createElement('div');
+  interlinkedLabel.textContent = a;
+  interlinkedLabel.className = 'url-target';
 
-  ul.appendChild(listItemRaw);
+  interlinkedAnchor.appendChild(interlinkedSVG);
+
+  const blob = document.createElement('div');
+  blob.className = 'interlinkedParent'
+  blob.appendChild(interlinkedLabel);
+  blob.appendChild(interlinkedAnchor)
+
+  ul.appendChild(blob);
 }
 
 // Pause all SVG animations
@@ -146,7 +161,10 @@ fetch('./data/dev-resources.csv')
     var rows = data.split('\n');
     var ul = document.getElementById('collected-links');
 
-    for (var i = 0; i < rows.length; i++) {
+    // for (var i = 0; i < rows.length; i++) {
+    //   lazyLoadListItemRaw(rows[i], ul);
+    // }
+    for (var i = 0; i < 4; i++) {
       lazyLoadListItemRaw(rows[i], ul);
     }
   })
