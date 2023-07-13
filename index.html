@@ -1,36 +1,35 @@
 <html>
 <head>
   <title>"...idle Time runs gadding by..."</title>
-  <script defer src="app.js"></script>
-  <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div class="interlinked-grid">
-    <div>
-      <h1 class="interlinked-mark"><mark>"Interlinked"</mark></h1>
-    </div>
-
-    <h2><em>This is a collection of Design and Engineering related links.</em> </h2>
-
-    <div>
-      <p>I've visualized each URL here using an algorithm to process the URL as a string, and generate an SVG artifact.</p>
-    </div>
-
+  <div class="interlinked-main-grid">
+    <h5>A collection of Design and Engineering related links.</h5>
   </div>
 
-  <div class="interlinked-grid">
-    <div><em><strong>As I go about building things</strong></em> throughout my day, I often come across useful resource on the internet. I don't want to lose these links. The habit of bookmarking has never been easy to develop for me.</div>
-    <div><em><strong>Right now the idea of visualizing my collection with svg seems fitting.</strong></em> I did end up using chatgpt for some parts of the algorithm, simply because I was more interested in the outcome than the code; like parcing the url string. But now that I have the foundation, I think I'll go back into the JavaScript and fine tune things.</div>
+  <div class="interlinked-main-grid">
+    <!-- <h1 class="interlinked-title">"Interlinked"</h1> -->
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1304 301">
+      <text class="hullo" id="interlinked" transform="translate(0 226)" fill="#707070" font-size="301" font-family="Times-Roman, Times"><tspan x="0" y="0">interlinked</tspan></text>
+    </svg>
   </div>
-  <hr>
-  <div class="interlinked-grid" id="collected-links"></div>
+  <div class="interlinked-main-grid">
+    <p><span class="para-start">I've visualized each URL here using an algorithm</span> to process the URL as a string, and generate an SVG artifact. As I go about building things throughout my day, I often come across useful resources on the internet. I don't want to lose these links. The habit of bookmarking has never been easy for me to develop</p>
+
+    <p><span class="para-start">Right now, the idea of visualizing my collection with SVG seems fitting.</span> I did end up using ChatGPT for some parts of the algorithm, simply because I was more interested in the outcome than the code, such as parsing the URL string. But now that I have the foundation, I think I'll go back into the JavaScript and fine-tune things.</p>
+  </div>
+<hr>
+  <div class="interlinked-main-grid" id="collected-links"></div>
+
   <div class="svgControls">
     <h4><em>Coming Soon!</em></h4>
     <button id="pauseButton">Pause</button>
     <button id="resumeButton">Play</button>
   </div>
 
+  <script src="app.js"></script>
 </body>
 </html>

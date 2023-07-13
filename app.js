@@ -95,6 +95,7 @@ function lazyLoadListItemRaw(item, ul) {
   interlinkedLabel.textContent = a;
   interlinkedLabel.className = 'url-target';
 
+
   interlinkedAnchor.appendChild(interlinkedSVG);
 
   const blob = document.createElement('div');
@@ -164,7 +165,7 @@ fetch('./data/dev-resources.csv')
     // for (var i = 0; i < rows.length; i++) {
     //   lazyLoadListItemRaw(rows[i], ul);
     // }
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 20; i++) {
       lazyLoadListItemRaw(rows[i], ul);
     }
   })

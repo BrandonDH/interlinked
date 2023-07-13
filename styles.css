@@ -1,50 +1,61 @@
-body {
-  width: 100%;
-}
 
-.interlinked-grid {
+body {
+  background-color:rgb(255, 252, 248);
+  color:rgb(52, 29, 0);
+}
+.interlinked-main-grid {
     margin: 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
 }
 
-.interlinked-mark {
-  position: fixed;
+.hullo {
+  fill:rgb(52, 29, 0);
+}
+
+.para-start {
+  font-weight: bold;
+}
+
+.interlinked-label {
+  padding: 1em;
+  display: none;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  font-weight: bold;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.845);
 }
 
 .interlinked-child-grid {
   display: grid;
 }
 
-
-.url-target {
-  display:none;
-  position:relative;
-  bottom: 2rem;
+.link {
+  border: 1px solid rgb(255, 252, 248);
+  display: block;
+  position: relative;
 }
-
-
 
 .link:hover {
-  border: 1px solid black;
-  border-radius: 2rem;
+  border: 1px solid rgb(52, 29, 0);
+  border-radius: 1em;
 }
 
-.link:hover > div.url-target {
+.link:hover .interlinked-label {
   display: block;
 }
 
 svg {
-  stroke: black;
+  stroke: rgb(52, 29, 0);
   fill: transparent;
-  background-color: rgb(244, 244, 244);
-  border-radius: 2rem;
-
+  background-color: transparent;
 }
 
 .svgControls {
   position: fixed;
   bottom: 0;
-  margin: 1rem;
-}
+  margin: 1em;
+} 
