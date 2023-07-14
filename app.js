@@ -100,7 +100,7 @@ function lazyLoadListItemRaw(item, ul) {
 
   const blob = document.createElement('div');
   blob.className = 'interlinkedParent'
-  blob.appendChild(interlinkedLabel);
+  // blob.appendChild(interlinkedLabel);
   blob.appendChild(interlinkedAnchor)
 
   ul.appendChild(blob);

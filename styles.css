@@ -1,12 +1,13 @@
 
 body {
+  margin: 3em;
   background-color:rgb(255, 252, 248);
   color:rgb(52, 29, 0);
 }
 .interlinked-main-grid {
     margin: 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
 }
 
@@ -16,6 +17,7 @@ body {
 
 .para-start {
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 .interlinked-label {
@@ -52,6 +54,7 @@ svg {
   stroke: rgb(52, 29, 0);
   fill: transparent;
   background-color: transparent;
+  stroke-width: 3px;
 }
 
 .svgControls {
